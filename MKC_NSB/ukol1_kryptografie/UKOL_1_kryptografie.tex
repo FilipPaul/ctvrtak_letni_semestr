@@ -24,11 +24,39 @@
 \usepackage{subcaption}
 \usepackage{xfrac}
 \usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{xcolor}
+
 
 \usepackage{listings}
 \usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
 \definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
 \definecolor{mylilas}{RGB}{170,55,241}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
 
 
 %date format
@@ -78,9 +106,18 @@
 			\end{table}%
 
 		\item \textbf{Vypracování:}\\
+		Na následujícím obrázku jsou vyznačeny stavy v decimální i binární podobě pro každý "stupeň"
+		blokové šifry. Tyto hodnoty byly vypočítány pomocí python scriptu přiloženého na konci tohoto pdf souboru.
+		Nicméně pro lepší zobrazení scriptu můžete využít link na můj github repozitář $\rightarrow$ 
+		\href{https://github.com/FilipPaul/ctvrtak_letni_semestr/tree/main/MKC_NSB/ukol1_kryptografie}{\color{blue} PYTHON CBC.py}
+
+		\begin{figure}[ht!]
+			\centering
+			\includegraphics[width = 1\textwidth]{CBC_drawing.eps}
+		\end{figure}
  	
 	\end{enumerate}
-
+\clearpage
 	\section*{\large{\textbf{Výpočet pečeti HMAC}}}
 		\begin{enumerate}
 			\item \textbf{Zadání:}\\
@@ -92,6 +129,13 @@
 				hešování tedy bude t = 4, protože první blok je výsledek xorování klíče a konstanty a další bloky
 				jsou bloky zprávy. Ve druhém hešování bude t = 2. Pečetí P je výstup z druhého hešování, tj. P = $h_2$.
 				\item \textbf{Vypracování:}\\
+				Podobně jako v předcházejícím úkolu byla úloha řešena pomocí python
+				\href{https://github.com/FilipPaul/ctvrtak_letni_semestr/tree/main/MKC_NSB/ukol1_kryptografie}{\color{blue} scriptu}.
+				Na následujícím obrázku jsou znázorněny jednotlivé "stavy" heshovací funkce HMAC v binární i decimální podobě.
+				\begin{figure}[ht!]
+					\centering
+					\includegraphics[width = 1\textwidth]{HMAC_drawing.eps}
+				\end{figure}
 		\end{enumerate}
 
 		\section*{\large{\textbf{RSA podpis}}}
@@ -103,6 +147,19 @@
 			\item \textbf{Vypracování:}\\
 
 		\end{enumerate}
+	\section*{\large{\textbf{Přiložené soubory}}}
+	\lstinputlisting[language=python]{cbc.py}
+	Output:\\
+	xor\_1: init\_vect(DEC:6, BIN:0110) XOR Z\_0(DEC:13, BIN:1101)\\
+	Encription\_input\_1: (DEC:11, BIN:1011)\\
+	Cryptogram\_1: (DEC:12, BIN:1100)\\
+	xor\_2: init\_vect(DEC:12, BIN:1100) XOR Z\_1(DEC:4, BIN:0100)\\
+	Encription\_input\_2: (DEC:8, BIN:1000)\\
+	Cryptogram\_2: (DEC:6, BIN:0110)\\
+	xor\_3: init\_vect(DEC:6, BIN:0110) XOR Z\_2(DEC:9, BIN:1001)\\
+	Encription\_input\_3: (DEC:15, BIN:1111)\\
+	Cryptogram\_3: (DEC:3, BIN:0011)
+
 \end{document}
 
 %\[f(x)= (x+2)^2 - \frac{9\cdot 2\pi}{26}\] %%mathematic equatation in display style mode
