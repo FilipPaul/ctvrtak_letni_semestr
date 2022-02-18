@@ -113,7 +113,7 @@
 
 		\begin{figure}[ht!]
 			\centering
-			\includegraphics[width = 1\textwidth]{CBC_drawing.eps}
+			\includegraphics[height = 0.6\textheight]{CBC_drawing.eps}
 		\end{figure}
  	
 	\end{enumerate}
@@ -128,7 +128,7 @@
 				kde hešovací konstanta a = 11, $v_i$ je i-tý blok hešovaného vstupu a t počet bloků na vstupu. V prvém
 				hešování tedy bude t = 4, protože první blok je výsledek xorování klíče a konstanty a další bloky
 				jsou bloky zprávy. Ve druhém hešování bude t = 2. Pečetí P je výstup z druhého hešování, tj. P = $h_2$.
-				\item \textbf{Vypracování:}\\
+				\item \textbf{Vypracování:}\\\\
 				Podobně jako v předcházejícím úkolu byla úloha řešena pomocí python
 				\href{https://github.com/FilipPaul/ctvrtak_letni_semestr/blob/main/MKC_NSB/ukol1_kryptografie/README.md}{\color{blue} scriptu}.
 				Na následujícím obrázku jsou znázorněny jednotlivé "stavy" heshovací funkce HMAC v binární i decimální podobě.
@@ -145,6 +145,12 @@
 				autentická. Znáte veřejný ověřovací klíč udávaného autora VK = 3, jeho modulus n = 33 a víte, že
 				byla použita hešovací funkce H ze 2. příkladu.
 			\item \textbf{Vypracování:}\\
+				Z následujícího obrázku je doufám patrný postup ověření podpisu. Výsledkem procesu je, že podpis
+				nebyl přijat. Jinak řečeno zpráva je nevěrohodná.\\
+				\begin{figure}[ht!]
+					\centering
+					\includegraphics[width = 1\textwidth]{RSA_drawing.eps}
+				\end{figure}
 
 		\end{enumerate}
 	\clearpage
@@ -163,6 +169,7 @@
 	xor\_3: init\_vect(DEC:6, BIN:0110) XOR Z\_2(DEC:9, BIN:1001)\\
 	Encription\_input\_3: (DEC:15, BIN:1111)\\
 	Cryptogram\_3: (DEC:3, BIN:0011)
+	\clearpage
 	\item \textbf{HMAC.py}\\
 	\lstinputlisting[language=python]{HMAC.py}
 	Output:\\
