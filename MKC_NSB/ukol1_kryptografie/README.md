@@ -10,6 +10,7 @@ message_blocks = [13,4,9] #input message blocks
 table_output = [4,10,9,2,13,8,0,14,6,11,1,12,7,15,5,3] #Encryption substitution table
 initial_vector = 6 #IV
 
+########################## ENCRYPTION##########################################
 output_cryptograms_list = [] #help variable to store cryptograms
 input_encryption_list = [] #help variable to store inputs for encryption function (output of XOR)
 i = 0
@@ -27,6 +28,16 @@ for blocks in message_blocks: #for each message block
     output_cryptograms_list.append(table_output[input_encryption_list[-1]])
     print(f"Cryptogram_{i+1}: {formatInputs(output_cryptograms_list[-1])}")
     i+=1
+
+########################## DECRYPTION ##########################################
+i = 0
+for cryptograms in output_cryptograms_list:
+    print(f"Output of Dk_{i+1}: {formatInputs(table_output.index(cryptograms))}")
+    if i == 0:
+        print(f"Decrypted message block_{i+1}: {formatInputs(table_output.index(cryptograms)^initial_vector)}")
+    else:
+        print(f"Decrypted message block_{i+1}: {formatInputs(table_output.index(cryptograms)^output_cryptograms_list[i-1])}")
+    i+=1
 ```
 
 Output:\
@@ -38,7 +49,13 @@ Encription_input_2: (DEC:8, BIN:1000)\
 Cryptogram_2: (DEC:6, BIN:0110)\
 xor_3: init_vect(DEC:6, BIN:0110) XOR Z_2(DEC:9, BIN:1001)\
 Encription_input_3: (DEC:15, BIN:1111)\
-Cryptogram_3: (DEC:3, BIN:0011)
+Cryptogram_3: (DEC:3, BIN:0011)\
+Output of Dk_1: (DEC:11, BIN:1011)\
+Decrypted message block_1: (DEC:13, BIN:1101)\
+Output of Dk_2: (DEC:8, BIN:1000)\
+Decrypted message block_2: (DEC:4, BIN:0100)\
+Output of Dk_3: (DEC:15, BIN:1111)\
+Decrypted message block_3: (DEC:9, BIN:1001)
 <br>
 <h1>HMAC</h1>
 

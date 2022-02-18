@@ -1,4 +1,6 @@
-
+print(6^11)
+print(8^12)
+print(15^6)
 
 def Encryption_function(message_Z, encrypt_key_Ke):
     """ C = E(Z,Ke), where C..cryptogram, E..Encryption function itself, Z..message, Ke..EncryptionKey"""

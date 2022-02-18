@@ -7,6 +7,7 @@ message_blocks = [13,4,9] #input message blocks
 table_output = [4,10,9,2,13,8,0,14,6,11,1,12,7,15,5,3] #Encryption substitution table
 initial_vector = 6 #IV
 
+########################## ENCRYPTION##########################################
 output_cryptograms_list = [] #help variable to store cryptograms
 input_encryption_list = [] #help variable to store inputs for encryption function (output of XOR)
 i = 0
@@ -23,4 +24,14 @@ for blocks in message_blocks: #for each message block
     #XOR output serves as pointer to the item of encryption table_output list
     output_cryptograms_list.append(table_output[input_encryption_list[-1]])
     print(f"Cryptogram_{i+1}: {formatInputs(output_cryptograms_list[-1])}")
+    i+=1
+
+########################## DECRYPTION ##########################################
+i = 0
+for cryptograms in output_cryptograms_list:
+    print(f"Output of Dk_{i+1}: {formatInputs(table_output.index(cryptograms))}")
+    if i == 0:
+        print(f"Decrypted message block_{i+1}: {formatInputs(table_output.index(cryptograms)^initial_vector)}")
+    else:
+        print(f"Decrypted message block_{i+1}: {formatInputs(table_output.index(cryptograms)^output_cryptograms_list[i-1])}")
     i+=1
