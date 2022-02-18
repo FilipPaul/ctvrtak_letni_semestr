@@ -137,7 +137,7 @@
 					\includegraphics[width = 1\textwidth]{HMAC_drawing.eps}
 				\end{figure}
 		\end{enumerate}
-
+	\clearpage
 		\section*{\large{\textbf{RSA podpis}}}
 		\begin{enumerate}
 			\item \textbf{Zadání:}\\
@@ -147,7 +147,11 @@
 			\item \textbf{Vypracování:}\\
 
 		\end{enumerate}
+	\clearpage
 	\section*{\large{\textbf{Přiložené soubory}}}
+	\begin{enumerate}
+	\item \textbf{CBC.py}\\
+
 	\lstinputlisting[language=python]{cbc.py}
 	Output:\\
 	xor\_1: init\_vect(DEC:6, BIN:0110) XOR Z\_0(DEC:13, BIN:1101)\\
@@ -159,7 +163,14 @@
 	xor\_3: init\_vect(DEC:6, BIN:0110) XOR Z\_2(DEC:9, BIN:1001)\\
 	Encription\_input\_3: (DEC:15, BIN:1111)\\
 	Cryptogram\_3: (DEC:3, BIN:0011)
-
+	\item \textbf{HMAC.py}\\
+	\lstinputlisting[language=python]{HMAC.py}
+	Output:\\
+	K1: (DEC:10, BIN: 1010)\\
+	K2: (DEC:15, BIN: 1111)\\
+	h1: (DEC:13, BIN: 1101)\\
+	h2: (DEC:3, BIN: 0011)
+\end{enumerate}
 \end{document}
 
 %\[f(x)= (x+2)^2 - \frac{9\cdot 2\pi}{26}\] %%mathematic equatation in display style mode

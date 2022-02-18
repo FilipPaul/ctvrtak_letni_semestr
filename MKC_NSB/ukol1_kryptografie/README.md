@@ -89,4 +89,4 @@ Output:\
 K1: (DEC:10, BIN: 1010)\
 K2: (DEC:15, BIN: 1111)\
 h1: (DEC:13, BIN: 1101)\
-h2: (DEC:3, BIN: 0011)\
+h2: (DEC:3, BIN: 0011)
