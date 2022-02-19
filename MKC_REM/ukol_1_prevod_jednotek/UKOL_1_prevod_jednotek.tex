@@ -1,0 +1,138 @@
+%%PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt, a4paper]{article}% size of txt = 10pt
+\usepackage[top= 2cm,
+			bottom = 2cm,
+			left = 1.7cm,
+			right = 1.7cm,
+			footskip = 0.5cm,
+			headsep = 0cm,
+			headheight = 0cm
+					]{geometry}
+\usepackage{amsmath} % math packages
+\usepackage{amsfonts}% math packages
+\usepackage{amssymb} % math packages
+\usepackage{graphicx} %package for including graphics
+\usepackage{array}
+\usepackage[thinlines]{easytable}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage[hidelinks]{hyperref}
+\usepackage[shortlabels]{enumitem}
+\usepackage{svg}
+\usepackage{bigstrut}
+\usepackage{wrapfig,lipsum,booktabs}
+\usepackage{subcaption}
+\usepackage{xfrac}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+
+%date format
+\def\mydate{\leavevmode\hbox{\twodigits\day.\twodigits\month.\the\year}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{1cm}
+
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 2pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 2pt\hskip\tabcolsep}}
+\makeatother
+\newcolumntype{?}{!{\vrule width 2pt}}
+%%DOC ENVIROMENT%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Title 
+\begin{flushleft}%% left justification
+	\textbf{\Large{MKC-REM: Úkol č. 1}}\hfill Filip Paul\\
+	\large{Převody jednotek \hfill\mydate}
+\end{flushleft}
+	\section*{\Large Zadání:}
+	Převeďte následující hodnoty 1; 2; 5 $\mu$W a 10; 20; 100 mV naměřené na kmitočtu 1,33 GHz pomocí
+	spektrálního analyzátoru Rohde\&Schwarz FSL3. Převod proveďte na následující jednotky dBm
+	a dB$\mu$V (všechny zadané hodnoty do obou jednotek).	
+	\section*{\Large Vypracování:}
+	Podle specifikace má R\&S FSL3 vstupní impedanci 50$\Omega$ nebo 75$\Omega$, kde právě 50$\Omega$ je
+	defaultní hodnota. Všechny výpočty byly tedy prováděny pro vstupní impedanci 50$\Omega$.
+	\\\\
+	\textbf{Příklad výpočtu: 5$\mu W$ na dBm:}\\
+
+	$P_{dBm} = 10\cdot log\left( \dfrac{P}{1\,mW} \right) = 10\cdot log\left( \dfrac{5\mu W}{1\,mW} \right) = -23.01\,dBm$
+	\\\\\\
+	\textbf{Příklad výpočtu: 5$\mu W$ na dB$\mu V$:}\\
+	$P = \dfrac{V^2}{R} \rightarrow V = \sqrt{PR}$\\\\
+	$V_{dB\mu V} = 20\cdot log \left( \dfrac{V}{1\mu V} \right) = 20\cdot log \left( \dfrac{\sqrt{P\cdot R}}{1\mu V} \right)
+	=20\cdot log \left( \dfrac{\sqrt{5\mu W \cdot 50}}{1\mu V} \right) = 83.98\,dB\mu V$
+	\\\\\\
+	\textbf{Příklad výpočtu: 100mV na dBm:}\\
+	$P = \dfrac{V^2}{R}$\\
+	$P_{dBm} = 10\cdot log\left( \dfrac{P}{1\,mW} \right) = 10\cdot log\left( \dfrac{ V^2/R}{1\,mW} \right)
+	=10\cdot log\left( \dfrac{(100\,mV)^2 \cdot 50}{1\,mW} \right) = -6.98\,dBm $\\
+	\\\\\\
+	\textbf{Příklad výpočtu: 100mV na dB$\mu$V:}\\
+	$V_{dB\mu V} = 20\cdot log \left( \dfrac{V}{1\mu V} \right) = 20\cdot log \left( \dfrac{100\,mV}{1\mu V} \right)
+	= 100\,dB\mu V$
+	\\\\\\
+	\textbf{Výsledky:}
+	Všechny následující výsledky byly vypočítány přiloženým python scriptem, který si můžete
+	zobrazit na mojem v mojem github repozitáři
+	\href{https://github.com/FilipPaul/ctvrtak_letni_semestr/blob/main/MKC_REM/ukol_1_prevod_jednotek/README.md}{\color{blue} zde}.
+	\\\\
+	\noindent
+	\begin{minipage}[t]{0.5\textwidth}
+		\textbf {Převod výkon $\rightarrow$ dBm:}\\
+		$1W \rightarrow 30.00dBm$ \\
+		$2W \rightarrow 33.01dBm$ \\
+		$5\mu W \rightarrow -23.01dBm$ \\
+		
+		\textbf {Převod výkon $\rightarrow$ dB$\mu $V:}\\
+		$1W \rightarrow 136.99dB\mu V$ \\
+		$2W \rightarrow 140.00dB\mu V$ \\
+		$5\mu W \rightarrow 83.98dB\mu V$ \\
+	\end{minipage}% % leave no gap
+	\begin{minipage}[t]{0.5\textwidth}
+		\textbf { Převod napětí $\rightarrow$ dB$\mu $V:}\\
+		$10V \rightarrow 140.00dB\mu V$ \\
+		$20V \rightarrow 146.02dB\mu V$ \\
+		$100mV \rightarrow 100.00dB\mu V$ \\
+		
+		\textbf {Převod napětí $\rightarrow$ dBm:}\\
+		$10V \rightarrow 33.01dBm$ \\
+		$20V \rightarrow 39.03dBm$ \\
+		$100mV \rightarrow -6.99dBm$ \\
+	\end{minipage}
+\end{document}
