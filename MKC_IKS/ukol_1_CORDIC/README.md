@@ -38,8 +38,24 @@ function [last_iteration,vectors,angles] = CORDIC_fun(input_vector,angle,MAX_ERR
             output_vectors(i,:) = input_vector;
             if angle_rad == 0 %For translation mode
                 ERROR(i) = output_angles(i);
-            else
+                if abs(ERROR(i)) > 45*pi/180 %ALL quadrants
+                    output_angles(i) = output_angles(i) + sign(ERROR(i))*45*pi/180;
+                    ERROR(i) = output_angles(i);
+                    output_vectors(i,:) = [cos(output_angles(i)),sin(output_angles(i))];
+                end
+            else %Rotation MOde
                 ERROR(i) = -angle_rad;
+                while abs(ERROR(i)) > 45*pi/180 %ALL quadrants
+                    disp(sign(ERROR(i)) + "45°")
+                    output_angles(i) = output_angles(i) - sign(ERROR(i))*45*pi/180;
+                    (angle_rad - sign(ERROR(i))*45*pi/180)*180/pi
+                    angle_rad = (angle_rad + sign(ERROR(i))*45*pi/180);
+                    ERROR(i) = - angle_rad ;
+                    output_vectors(i,:) = [cos(output_angles(i)),sin(output_angles(i))];
+                    l = sqrt(output_vectors(i,1)^2 + output_vectors(i,2)^2);
+                    output_vectors(i,:) = output_vectors(i,:)/l *l_init;
+                    
+                end
             end
             txt = sprintf(format_str,i-1, sign(ERROR(i)*(-1)),...
             table_of_iters(i),output_angles(i)*180/pi,...
@@ -62,7 +78,7 @@ function [last_iteration,vectors,angles] = CORDIC_fun(input_vector,angle,MAX_ERR
             
             if angle_rad == 0 %For translation mode
                 ERROR(i) = output_angles(i);
-            else
+            else %rotation mode
                ERROR(i) = output_angles(i) - (angle_rad+output_angles(1));
             end
 
@@ -73,7 +89,7 @@ function [last_iteration,vectors,angles] = CORDIC_fun(input_vector,angle,MAX_ERR
                 disp(txt)
             end
 
-            if abs(ERROR(i)) < MAX_ERROR_RAD
+            if (abs(ERROR(i)) < MAX_ERROR_RAD) || (i == n_iterations) 
                 last_iteration = i-1;
                 last_Error = ERROR(i);
                 angles = output_angles;
@@ -139,11 +155,11 @@ xlim([0,0.52])
 ylim([0,0.75])
 ax = gca;
 ax.FontSize = fontsize_ticks;
-title("CORDIC Vector rotation: init vector = [0.5,0.5], Max Error = 0.5°","FontSize",fontsize_title)
+title("CORDIC Vector rotation: \Theta = 40°, init vector = [0.5,0.5], Max Error = 0.5°","FontSize",fontsize_title)
 xlabel("X","FontSize",fontsize_axis)
 ylabel("Y","FontSize",fontsize_axis)
 
-saveas(gcf,"CORDIC_vect_rot","epsc")
+%saveas(gcf,"CORDIC_vect_rot","epsc")
 
 %% CORDIC VECTOR TRANSLATION FIGURE
 disp("CORDIC vector translation")
@@ -175,9 +191,44 @@ grid minor
 axis equal
 ax = gca;
 ax.FontSize = fontsize_ticks;
-title("CORDIC Vector transaltion: \Theta = 40°, init vector = [0.5,0.25], Max Error = 0.5°","FontSize",fontsize_title)
+title("CORDIC Vector translation: init vector = [0.5,0.5], Max Error = 0.5°","FontSize",fontsize_title)
 xlabel("X","FontSize",fontsize_axis)
 ylabel("Y","FontSize",fontsize_axis)
 
-saveas(gcf,"CORDIC_vect_trans","epsc")
+%saveas(gcf,"CORDIC_vect_trans","epsc")
+
+%% CORDIC VECTOR TRANSLATION MORE THAN 45°
+disp("CORDIC vector translation")
+[iter,vector,angles] = CORDIC_fun([0.5,0.7],150,MAX_ERROR,MAX_iterations,1);
+
+figure('Name','tng','units','normalized','outerposition',[0 0 0.5 0.8]);
+%plot(QX, QY, '-r', 'LineWidth',1.2) 
+hold on
+texts = string(zeros(1,iter+1));
+for i = 1:1:iter+1
+    QX = vector(i,1);
+    QY = vector(i,2);       
+    quiv = quiver(0, 0, QX,QY,0);
+    set(quiv,'MaxHeadSize',0.08);
+    txt = sprintf("iter:%d; vect: [%0.3f,%0.3f] ; angle: %0.4f°",...
+        i-1, QX,QY,angles(i)*180/pi);
+    texts(i) = txt;
+    c = get(quiv,'Color');
+    text(QX*0.85,QY*0.85,txt,'HorizontalAlignment','center','VerticalAlignment',...
+        'bottom','rotation',angles(i)*180/pi, "FontSize", 12, 'Color',c)
+end
+legend(texts,'Location','Northwest','FontSize',fontsize_legend+8,'AutoUpdate','off')
+plot([-1,0.1],[0,0], "-k")
+plot([0,0],[0.1,-0.6], "-k")
+
+grid on
+grid minor
+axis equal
+ax = gca;
+ax.FontSize = fontsize_ticks;
+title("CORDIC Vector rotation: \Theta = 150°, init vector = [0.5,0.7], Max Error = 0.5°","FontSize",fontsize_title)
+xlabel("X","FontSize",fontsize_axis)
+ylabel("Y","FontSize",fontsize_axis)
+
+saveas(gcf,"CORDIC_vect_trans_150","epsc")
 ```

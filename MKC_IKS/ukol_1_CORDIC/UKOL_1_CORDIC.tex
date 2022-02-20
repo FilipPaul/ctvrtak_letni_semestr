@@ -87,7 +87,7 @@
 		Uvažujte algoritmus CORDIC v módu vektorové rotace. Kolik iterací je třeba pro otočení počátečního vektoru [0.5  0.5]
 		o -40° s chybou menší než 0,5°? Průběh jednotlivých iterací (zejména aktuální úhel) popište numericky a doplňte přehledným obrázkem. (2 body)\\
 		Úkol byl řešen pomocí MATLABU, příslušné scripty si můžete zobrazit v mém GITHUB repozitáři 
-		\href{https://github.com/FilipPaul/ctvrtak_letni_semestr/blob/main/MKC_REM/ukol_1_CORDIC/README.md}{\color{blue} zde}.
+		\href{https://github.com/FilipPaul/ctvrtak_letni_semestr/blob/main/MKC_IKS/ukol_1_CORDIC/README.md}{\color{blue} zde} (je tam i podrobnější log).
 	\begin{figure}[ht!]
 		\centering
 		\includegraphics[height = 0.80\textheight]{CORDIC_vect_rot.eps}
@@ -96,24 +96,36 @@
 	\clearpage
 	\section{\Large Úkol 2:}
 	Uvažujte algoritmus CORDIC v módu vektorové translace. Vstupní vektor je [0.5  0.25].
-	Průběh jednotlivých iterací zapište numericky a doplňte vhodným obrázkem. (2 body)\\
+	Průběh jednotlivých iterací zapište numericky a doplňte vhodným obrázkem. (2 body)\\\\
 	Obdobně jako v prvním úkolu, byl problém řešem pomocí MATLABU. V tomto případě,
-	stačila pouze jedna iterace pro dosažení úhlu 0°.
+	stačila pouze jedna iterace pro dosažení úhlu 0°. Dále se přiznávám, že jsem si trochu 
+	pomohl se "scalováním" vektorů po každé iteraci. Rozdíl spočívá v tom, že místo přenásobování
+	konstantou Ki po každém kroku, vektor znormuju a vynásobím velikostí počátečního vektoru. Trochu tak postup ztrácí kouzlo
+	a hlavní myšlenku CORDICU co nejméně zatěžovat $\mu C$, nicméně hlavním důvodem bylo vygenerovat obrázky, takže 
+	v rámci úspory času jsem se rozhodl pro nejrychlejší řešení. Dále jsem až po dokončení vlastní implementace viděl
+	návod ze cvik, kde se Vaše a moje implementace především v rozhodování, zda se bude následující iterace přičítat nebo odečítat.
+	V mé implentaci se rozhoduji podle rozdílu úhlů a ne hodnoty souřadnic.
 	\begin{figure}[ht!]
 		\centering
 		\includegraphics[width = 1\textwidth]{CORDIC_vect_trans.eps}
 		
 	\end{figure}
-	
-	\section*{\Large Vypracování:}
-	placeholder
-
-	\section{\Large Zadání:}
+\clearpage
+	\section{\Large Úkol 3:}
 	Jakým způsobem je třeba algoritmus CORDIC upravit, aby pracoval ve všech kvadrantech? (2 body).
-	Inspirací vám může být například následující obrázek:
+	Inspirací vám může být například následující obrázek:\\
+	Pro rotaci o neomezeně velký úhel, jsem CORDIC implementoval tak, že nejprve rotuji počáteční vektor po násobcích
+	45° tak dlouho, než úhlová chyba bude menší než 45°. Pak už je implementace stejná jako v předchozích úlohách.
+	Na obrázku níže není zobraz počáteční vektor. To protože jsem nechtěl výrazně zasahovat do funkce z předchozích
+	úloh a tak se jako počáteční vektor v první iteraci zobrazuje až vektor posunutý o n-krát 45°. Pro ověření správnosti:\\
 
-	\section*{\Large Vypracování:}
-	placeholder
+	Počáteční úhel $\Theta = acos(\dfrac{X}{|vect|}) = acos\left(X\dfrac{0.5}{\sqrt{0.5^2 + 0.7^2}}\right) =  54.46$°\\\\
+	Po otočení o 150° tedy dostáváme 204.46°, což sedí s obrázkem níže.
+	\begin{figure}[ht!]
+		\centering
+		\includegraphics[width = 1\textwidth]{CORDIC_vect_trans_150.eps}
+		
+	\end{figure}
 
 \end{document}
 

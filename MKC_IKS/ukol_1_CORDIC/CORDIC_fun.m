@@ -19,8 +19,24 @@ function [last_iteration,vectors,angles] = CORDIC_fun(input_vector,angle,MAX_ERR
             output_vectors(i,:) = input_vector;
             if angle_rad == 0 %For translation mode
                 ERROR(i) = output_angles(i);
-            else
+                if abs(ERROR(i)) > 45*pi/180 %ALL quadrants
+                    output_angles(i) = output_angles(i) + sign(ERROR(i))*45*pi/180;
+                    ERROR(i) = output_angles(i);
+                    output_vectors(i,:) = [cos(output_angles(i)),sin(output_angles(i))];
+                end
+            else %Rotation MOde
                 ERROR(i) = -angle_rad;
+                while abs(ERROR(i)) > 45*pi/180 %ALL quadrants
+                    disp(sign(ERROR(i)) + "45°")
+                    output_angles(i) = output_angles(i) - sign(ERROR(i))*45*pi/180;
+                    (angle_rad - sign(ERROR(i))*45*pi/180)*180/pi
+                    angle_rad = (angle_rad + sign(ERROR(i))*45*pi/180);
+                    ERROR(i) = - angle_rad ;
+                    output_vectors(i,:) = [cos(output_angles(i)),sin(output_angles(i))];
+                    l = sqrt(output_vectors(i,1)^2 + output_vectors(i,2)^2);
+                    output_vectors(i,:) = output_vectors(i,:)/l *l_init;
+                    
+                end
             end
             txt = sprintf(format_str,i-1, sign(ERROR(i)*(-1)),...
             table_of_iters(i),output_angles(i)*180/pi,...
@@ -43,7 +59,7 @@ function [last_iteration,vectors,angles] = CORDIC_fun(input_vector,angle,MAX_ERR
             
             if angle_rad == 0 %For translation mode
                 ERROR(i) = output_angles(i);
-            else
+            else %rotation mode
                ERROR(i) = output_angles(i) - (angle_rad+output_angles(1));
             end
 
@@ -54,7 +70,7 @@ function [last_iteration,vectors,angles] = CORDIC_fun(input_vector,angle,MAX_ERR
                 disp(txt)
             end
 
-            if abs(ERROR(i)) < MAX_ERROR_RAD
+            if (abs(ERROR(i)) < MAX_ERROR_RAD) || (i == n_iterations) 
                 last_iteration = i-1;
                 last_Error = ERROR(i);
                 angles = output_angles;
