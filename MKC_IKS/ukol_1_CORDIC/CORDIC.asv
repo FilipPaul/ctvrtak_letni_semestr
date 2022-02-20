@@ -1,0 +1,88 @@
+clear variables
+close all
+clc
+
+fontsize_axis = 20;
+fontsize_ticks = 18;
+fontsize_legend = 15;
+fontsize_title = 20;
+fontsize_linewidth = 3;
+fontsize_marker = 15;
+
+input_vector = [0.5,0.5]; %[x,y]
+angle = 40; %rotation angle degrees
+MAX_ERROR = 0.5; %max error in degreees
+MAX_iterations = 20;
+
+disp("CORDIC vector rotation")
+[iter,vector,angles] = CORDIC_fun(input_vector,angle,MAX_ERROR,MAX_iterations,1);
+disp("CORDIC vector translation")
+[iter_trans,vector_trans,angles_trans] = CORDIC_fun([0.7,0.65],0,MAX_ERROR,MAX_iterations,1);
+
+%% CORDIC 
+figure('Name','tng','units','normalized','outerposition',[0 0 0.5 0.8]);
+%plot(QX, QY, '-r', 'LineWidth',1.2) 
+hold on
+texts = string(zeros(1,iter+1));
+for i = 1:1:iter+1
+    QX = vector(i,1);
+    QY = vector(i,2);       
+    quiv = quiver(0, 0, QX,QY,0);
+    set(quiv,'MaxHeadSize',0.08);
+    txt = sprintf("iter:%d; vect: [%0.3f,%0.3f] ; angle: %0.4f°",...
+        i-1, QX,QY,angles(i)*180/pi);
+    texts(i) = txt;
+    c = get(quiv,'Color');
+    text(QX*0.85,QY*0.85,txt,'HorizontalAlignment','center','VerticalAlignment',...
+        'bottom','rotation',angles(i)*180/pi, "FontSize", 12, 'Color',c)
+end
+legend(texts,'Location','Southeast','FontSize',fontsize_legend+8,'AutoUpdate','off')
+plot([-0.1,0.6],[0,0], "-k")
+plot([0,0],[-0.1,1.1], "-k")
+
+
+grid on
+grid minor
+axis equal
+xlim([0,0.52])
+ylim([0,0.75])
+ax = gca;
+ax.FontSize = fontsize_ticks;
+title("CORDIC Vector rotation: \Theta = 40°, init vector = [0.5,0.5], Max Error = 0.5°","FontSize",fontsize_title)
+xlabel("X","FontSize",fontsize_axis)
+ylabel("Y","FontSize",fontsize_axis)
+
+saveas(gcf,"CORDIC_vect_rot","epsc")
+%% FIgures
+if 0
+    figure('Name','tng','units','normalized','outerposition',[0.5 0 0.5 0.5]);
+    power_of_2 = zeros(1,20);
+    tan_cords = zeros(1,20);
+    for i = 1:1:20
+        power_of_2(i) = 2^(-i);
+        tan_cords(i) = atan(power_of_2(i));
+    end
+    x = 1e-7:1e-3:0.7;
+    y = tan(x);
+
+    loglog(x,y,"-b")
+    hold on
+    grid on
+    loglog(tan_cords,power_of_2, "xr",'MarkerSize',fontsize_marker)
+    for i = 1:1:length(tan_cords)
+        txt = sprintf('2^{(-%d)}', i);
+        text(tan_cords(i),power_of_2(i)*0.5,txt,"FontSize",15)
+    end
+    grid minor
+
+    title("tangens s vyznačenými hodnotami pro 2^{(-i)}, i > 0","FontSize",fontsize_title)
+    xlabel("log: x [rad]","FontSize",fontsize_axis)
+    ylabel("log: tan(x)","FontSize",fontsize_axis)
+    ax = gca;
+    ax.FontSize = fontsize_ticks;
+
+    legend("tan(x)","tan(2^{(-i)})",'Location','Southeast','FontSize',fontsize_legend+8)
+    legend('boxoff')
+
+    ylim([0,10])
+end
