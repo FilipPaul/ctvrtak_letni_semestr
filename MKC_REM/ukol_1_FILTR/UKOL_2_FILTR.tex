@@ -1,0 +1,135 @@
+%%PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt, a4paper]{article}% size of txt = 10pt
+\usepackage[top= 2cm,
+			bottom = 2cm,
+			left = 1.7cm,
+			right = 1.7cm,
+			footskip = 0.5cm,
+			headsep = 0cm,
+			headheight = 0cm
+					]{geometry}
+\usepackage{amsmath} % math packages
+\usepackage{amsfonts}% math packages
+\usepackage{amssymb} % math packages
+\usepackage{graphicx} %package for including graphics
+\usepackage{array}
+\usepackage[thinlines]{easytable}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage[hidelinks]{hyperref}
+\usepackage[shortlabels]{enumitem}
+\usepackage{svg}
+\usepackage{bigstrut}
+\usepackage{wrapfig,lipsum,booktabs}
+\usepackage{subcaption}
+\usepackage{xfrac}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+
+%date format
+\def\mydate{\leavevmode\hbox{\twodigits\day.\twodigits\month.\the\year}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{1cm}
+
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 2pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 2pt\hskip\tabcolsep}}
+\makeatother
+\newcolumntype{?}{!{\vrule width 2pt}}
+%%DOC ENVIROMENT%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Title 
+\begin{flushleft}%% left justification
+	\textbf{\Large{MKC-REM: Úkol č. 2}}\hfill Filip Paul\\
+	\large{Útlum filtru \hfill\mydate}
+\end{flushleft}
+	\section*{\Large Zadání:}
+	Substituční měřicí metodou dle ČSN CISPR 17 byl proměřen vložný útlum fltru. Při měření byly
+	použity následující měřicí přístroje: generátor Rohde \& Schwarz SML03 a spektrální analyzátor
+	Rohde \& Schwarz FSL3.Výstupní výkon generátoru byl nastaven na 7 dBm Měření probíhalo ve
+	dvou krocích dle obrázku a byly naměřeny následující hodnoty pomocí spektrálního analyzátoru na
+	jednotlivých zadaných kmitočtech:
+
+
+	\section*{\Large Zadání:}
+	Následující tabulka obsahuje již přepočtené hodnoty napětí na výkon. Pro přepočet všech hodnot byl
+	použit přiložený python script (pro lepší zobrazení můžete využít link na GITHUB 
+	\href{https://github.com/FilipPaul/ctvrtak_letni_semestr/blob/main/MKC_REM/ukol_2_FILTR/README.md}{\color{blue} README})
+	\\\\
+	\noindent
+	\begin{minipage}[t]{0.49\textwidth}
+		\vspace*{-2cm}
+		\textbf {Převod $dB\mu V$ $\rightarrow$ dBm pro 113.6$dB\mu V$:}\\\\
+		$V = 10^{\dfrac{dB\mu V}{20}}\cdot 1\mu V = 10^{\dfrac{113.6}{20}}\cdot 1\mu = 0.4786 V$\\\\
+		$PdBm = 10log\left( \dfrac{V^2}{R\cdot1\,mW} \right) = 10log\left( \dfrac{0.4786^2}{50\cdot1\,mW} \right)\\
+		PdBm =6.61\,dBm $\\\\
+		\textbf {Výpočet útlumu: (pro první řádek)}\\
+		$L = PdBm_A - PdBm_B = 6.1\,dBm - 5.8\,dBm = 0.3\,dB$ 
+
+	\end{minipage}% % leave no gap
+	\hfill
+	\begin{minipage}[t]{0.49\textwidth}
+		\begin{tabular}{?c?c?c?c?}
+		\thickhline 
+		freq & krok A & krok B & útlum L   \bigstrut\\
+		\thickhline 
+		10kHz & 6.1dBm & 5.8dBm & 0.30dB \bigstrut\\
+		\hline
+		20kHz & 5.8dBm & 4.21dBm & 1.59dB \bigstrut\\
+		\hline
+		50kHz & 6.8dBm & -12.9dBm & 19.70dB \bigstrut\\
+		\hline
+		100kHz & 6.61dBm & -27.49dBm & 34.10dB \bigstrut\\
+		\hline
+		200kHz & 5.3dBm & -30.6dBm & 35.90dB \bigstrut\\
+		\hline
+		300kHz & 4.7dBm & -22.89dBm & 27.59dB \bigstrut\\
+		\thickhline  
+		\end{tabular}%
+		\label{tab:addlabel}%
+	\end{minipage}
+	\\
+	\section*{\Large Python Script}
+	\lstinputlisting[language=python]{calc.py}
+
+ 
+
+\end{document}
