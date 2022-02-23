@@ -1,0 +1,17 @@
+(status): Nexxim version: 2021.2.0 WIN64, build time: May 24 2021, 22:40:30
+
+(status): Analyzing C:/Users/Filip/Desktop/ctvrtak_letni_semestr/MKC_VFO/PC_1/Project1.aedtresults/Circuit1/temp/DV10_S8_V12.cir.
+(info): Processing circuit for new analysis.
+omp(status): Requested number of threads in UI setting is 1
+circuit_details(status): Total device types: 3
+device type                                       number of devices
+----------------------------------------------------------------------
+capacitor_q                                       1
+inductor_q                                        1
+port_impedance                                    2
+(status): License checkout took 3.9 seconds.
+(info): Starting analysis type LNA.
+analysis:dc(status): Total DC newton iterations = 4, DC conv = 1.
+(status): LNA cpu time = 0.01
+(info): Simulation succeeded. Total simulator time: 0:00:04
+(status): Start Time:  02/23/2022 10:04:32, End Time:  02/23/2022 10:04:36, Host FILIPPC, 
