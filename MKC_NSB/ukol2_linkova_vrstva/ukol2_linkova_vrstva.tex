@@ -1,0 +1,125 @@
+%%PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt, a4paper]{article}% size of txt = 10pt
+\usepackage[top= 2cm,
+			bottom = 2cm,
+			left = 1.7cm,
+			right = 1.7cm,
+			footskip = 0.5cm,
+			headsep = 0cm,
+			headheight = 0cm
+					]{geometry}
+\usepackage{amsmath} % math packages
+\usepackage{amsfonts}% math packages
+\usepackage{amssymb} % math packages
+\usepackage{graphicx} %package for including graphics
+\usepackage{array}
+\usepackage[thinlines]{easytable}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage[hidelinks]{hyperref}
+\usepackage[shortlabels]{enumitem}
+\usepackage{svg}
+\usepackage{bigstrut}
+\usepackage{wrapfig,lipsum,booktabs}
+\usepackage{subcaption}
+\usepackage{xfrac}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+
+%date format
+\def\mydate{\leavevmode\hbox{\twodigits\day.\twodigits\month.\the\year}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{1cm}
+
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 2pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 2pt\hskip\tabcolsep}}
+\makeatother
+\newcolumntype{?}{!{\vrule width 2pt}}
+%%DOC ENVIROMENT%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Title 
+\begin{flushleft}%% left justification
+	\textbf{\Large{MKC-NBS: Úkol č. 1}}\hfill Filip Paul\\
+	\large{Kryptografie \hfill\mydate}
+\end{flushleft}
+\section*{\large{\textbf{Rámec Ethernet II:}}}
+	\begin{enumerate}
+		\item \textbf{Zadání:}\\
+		Níže jsou uvedeny bajty dvou rámců typu Ethernet II, tak jak byly zachyceny programem 
+		Wireshark. Tento program ve svých výpisech neuvádí návěští rámců ani jejich kontrolní součet, 
+		takže tato pole v zadání nehledejte.
+
+		\begin{minipage}{0.49\textwidth}
+			\textbf{1. rámec:}\\
+			01 00 5e 00 00 12 00 00 5e 00 01 01 08 00 45 c0\\
+			00 28 00 00 00 00 ff 70 17 f0 c0 a8 01 fb e0 00\\
+			00 12 21 01 c8 01 00 01 54 55 c0 a8 01 fe 00 00\\
+			00 00 00 00 00 00 00 00 00 00 00 00
+			
+		\end{minipage}
+		\begin{minipage}{0.49\textwidth}
+			\textbf{2. rámec:}\\
+			ff ff ff ff ff ff f0 f3 36 af f4 54 08 06 00 01 \\
+			08 00 06 04 00 01 00 07 0d af f4 54 18 a6 ac 01 \\
+			00 00 00 00 00 00 18 a6 ad 9f 06 01 04 00 00 00 \\
+			00 02 01 00 03 02 00 00 05 01 03 01
+		\end{minipage}
+
+
+
+		\item \textbf{Vypracování:}\\
+		Na následujícím obrázku jsou vyznačeny stavy v decimální i binární podobě pro každý "stupeň"
+		blokové šifry. Tyto hodnoty byly vypočítány pomocí python scriptu přiloženého na konci tohoto pdf souboru.
+		Nicméně pro lepší zobrazení scriptu můžete využít link na můj github repozitář $\rightarrow$ 
+		\href{https://github.com/FilipPaul/ctvrtak_letni_semestr/blob/main/MKC_NSB/ukol1_kryptografie/README.md}{\color{blue} PYTHON CBC.py}
+ 	
+	\end{enumerate}
+	%\lstinputlisting[language=python]{HMAC.py}
+\end{document}
+
+%\[f(x)= (x+2)^2 - \frac{9\cdot 2\pi}{26}\] %%mathematic equatation in display style mode
+%%optional:
+%	\begin{align} %%this alignes all charakters after & if *is removed equations will be numbered
+%	\hspace{5cm}  
+%		 x &= a_2 x^2 +_1 x + a_0 \\
+% 		x &=x^2 \nonumber		%no number will not add number to eq
+%	\end{align}
