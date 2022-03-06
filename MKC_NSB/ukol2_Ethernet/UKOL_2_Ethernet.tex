@@ -79,7 +79,7 @@
 %Title 
 \begin{flushleft}%% left justification
 	\textbf{\Large{MKC-NBS: Úkol č. 2}}\hfill Filip Paul\\
-	\large{Kryptografie \hfill\mydate}
+	\large{Linková vrstva \hfill\mydate}
 \end{flushleft}
 \section*{\large{\textbf{Rámec Ethernet II:}}}
 	\begin{itemize}[label={}]
@@ -111,38 +111,75 @@
 		a \href{https://www.adminsub.net/mac-address-finder}{\color{blue} adminsub.net}.
 
 		\item \textbf{Vypracování:}\\
+		Na následujícím obrázku je znázorněn postup "dekódování 1.rámce. Dekódování obou rámců bylo následně
+		provedeno pomocí python scriptu, který nalzenete v příloze na konci dokumentu. Souhrnné
+		výsledky pro první i druhý rámec a popis jednotlivých adres je na následující straně.
 		\begin{figure}[ht!]
 			\centering
-			\includegraphics[width = 1\textwidth]{ethernet.eps}
+			\includegraphics[width = 0.85\textwidth]{ethernet.eps}
 		\end{figure}
-		
-	\end{itemize}
+		\clearpage
 
-\section*{\large{\textbf{ Protokol STP:}}}
-	\begin{itemize}[label={}]
-		\item \textbf{Zadání:}\\
-		Je dána ethernetová síť sestávající ze čtyř přepínačů s identifikátory 1, 2, 3 a 4. Tyto přepínače jsou 
-		propojeny podle níže uvedeného obrázku. Pro zadanou síť určete pomocí algoritmu STP její kostru. 
-		Přenesené zprávy zapište do přehledné tabulky a zjištěnou kostru zakreslete s vyznačením, které porty jsou zapnuty a které blokovány.
+		\item \textbf{Popis jednotlivých typů adres:}
+		\begin{itemize}[label=$\bullet$]
+			\item \textbf{Globální (univerzální) vs lokální MAC adresa:}\\
+			Globální MAC adresy jsou celosvětově unikátními identifikátory, které zařízením přidělují přímo jejich výrobci.
+			Unikátnost není sice garantována, nicméně kolize dvou globálních MAC adres jsou velice nepravděpodobné.
+			Lokální adresy jsou většinou přidělovány softwarem síťové karty a umožňují tak přepsat globální adresu. Zda je adresa
+			lokální nebo globální lze rozlišit pomocí tzv. U/L bitu (viz obrázek na předchozí stránce).
 
+			\item \textbf{Individuální (Unicast) vs skupinová (multicast) MAC adresa:}\\
+			Individuální adresy mohou být jak zdrojové tak i cílové. Individuální adresa je určena pouze pro jedno zařízení
+			s danou MAC adresou. Pokud cílové zařízení obrdží zprávu s individuální MAC adresou, která mu nenáleží, tak
+			zprávu (frame) zignoruje.\\
+			Skupinové adresy jsou pouze cílové. Zprávy, které mají skupinovou MAC adresu, jsou určené více zařízením zároveň.
+			Speciálním typem je pak skupinová adresa s hodnotou FF:FF:FF:FF:FF:FF (Broadcast). Na zprávu s touto MAC adresou
+			"slyší" všechny síťové karty. Boradcast se používa například při ARP. 
+		\end{itemize}
 
-		\item \textbf{Vypracování:}\\
-		\href{https://github.com/FilipPaul/ctvrtak_letni_semestr/blob/main/MKC_NSB/ukol1_kryptografie/README.md}{\color{blue} PYTHON CBC.py}
-	\end{itemize}
-\section*{\large{\textbf{Přílohy:}}}
-
-\begin{itemize}[label={}]
-	\item \textbf{EthernetFrame.py}\\
-	\lstinputlisting[language=python]{calc.py}
+			\textbf{Dekódování prvního rámce:}\\
+			Destination address:\\
+			first byte: 0x01 $\rightarrow$ 0b00000001 $\rightarrow$group and global adress.\\
+			MAC: 01:00:5E:00:00:12 $\rightarrow$ Skupinová adresa pravděpodobně od výrobce ICANN, IANA Department\\\\
+			Source address:\\
+			first byte: 0x00 $\rightarrow$ 0b00000000 $\rightarrow$individual and global adress.\\
+			MAC: 00:00:5E:00:01:01 $\rightarrow$ Vendor specific part: 00:00:5E ICANN, IANA Department\\\\
+			lengt/type:\\
+			0x0800 $\rightarrow$ DEC: Value is bigger than DEC: 1536 $\rightarrow$ Ethertype is: IPv4\\
+			
+			\textbf{Dekódování druhého rámce:}\\
+			Destination address:\\
+			first byte: 0xFF $\rightarrow$ 0b11111111 $\rightarrow$ Broadcast.\\
+			MAC: FF:FF:FF:FF:FF:FF $\rightarrow$ Broadcast\\\\
+			Source address:\\
+			first byte: 0xF0 $\rightarrow$ 0b11110000 $\rightarrow$individual and global adress.\\
+			MAC: F0:F3:36:AF:F4:54 $\rightarrow$ Vendor specific part: F0:F3:36 TP-LINK TECHNOLOGIES CO.,LTD.\\\\
+			lengt/type:\\
+			0x0806 $\rightarrow$ DEC: Value is bigger than DEC: 1536 $\rightarrow$ Ethertype is: ARP
+		\end{itemize}
+	
 	\clearpage
-\end{itemize}
+	\section*{\large{\textbf{ Protokol STP:}}}
+		\begin{itemize}[label={}]
+			\item \textbf{Zadání:}\\
+			Je dána ethernetová síť sestávající ze čtyř přepínačů s identifikátory 1, 2, 3 a 4. Tyto přepínače jsou 
+			propojeny podle níže uvedeného obrázku. Pro zadanou síť určete pomocí algoritmu STP její kostru. 
+			Přenesené zprávy zapište do přehledné tabulky a zjištěnou kostru zakreslete s vyznačením, které porty jsou zapnuty a které blokovány.
+
+			\item \textbf{Vypracování:}\\
+			\begin{figure}[ht!]
+				\centering
+				\includegraphics[width = 0.9\textwidth]{STP.eps}
+			\end{figure}
+		\end{itemize}
+
+	\clearpage
+	\section*{\large{\textbf{Přílohy:}}}
+
+	\begin{itemize}[label={}]
+		\item \textbf{EthernetFrame.py}\\
+		\lstinputlisting[language=python]{calc.py}
+		\clearpage
+	\end{itemize}
 
 \end{document}
-
-%\[f(x)= (x+2)^2 - \frac{9\cdot 2\pi}{26}\] %%mathematic equatation in display style mode
-%%optional:
-%	\begin{align} %%this alignes all charakters after & if *is removed equations will be numbered
-%	\hspace{5cm}  
-%		 x &= a_2 x^2 +_1 x + a_0 \\
-% 		x &=x^2 \nonumber		%no number will not add number to eq
-%	\end{align}

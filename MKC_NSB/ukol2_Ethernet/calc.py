@@ -11,10 +11,10 @@ def parseMAC(MAC_frame):
                 individual_group = "group"
             elif individual_group == 0:
                 individual_group = "individual" 
-            if global_local == 1:
-                global_local = "local"
-            elif global_local == 0:
+            if global_local == 0:
                 global_local = "global"
+            elif global_local == 1:
+                global_local = "local"
             print(f"first byte: 0x{byte:02X} -> 0b{bin(byte)[2:].zfill(8)} ->{individual_group} and {global_local} adress.\nMAC: ",end = "")
 
         MAC_str += f"{byte:02X}:"
