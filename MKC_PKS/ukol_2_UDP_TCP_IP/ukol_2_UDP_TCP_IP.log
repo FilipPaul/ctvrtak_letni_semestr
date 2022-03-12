@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.15)  7 MAR 2022 12:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.10.15)  11 MAR 2022 23:07
 entering extended mode
 **c:/Users/filip/Desktop/ctvrtak_letni_semestr/MKC_PKS/ukol_2_UDP_TCP_IP/ukol_2_UDP_TCP_IP.tex
 (c:/Users/filip/Desktop/ctvrtak_letni_semestr/MKC_PKS/ukol_2_UDP_TCP_IP/ukol_2_UDP_TCP_IP.tex
@@ -823,33 +823,48 @@ Overfull \hbox (17.20471pt too wide) in paragraph at lines 107--120
 [1
 
 {C:/Users/filip/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <c:/Users/filip/Desktop/ctvrtak_letni_semestr/MKC_PKS/ukol_2_UDP_TCP_IP/plov_okno-eps-converted-to.pdf> <c:/Users/filip/Desktop/ctvrtak_letni_semestr/MKC_PKS/ukol_2_UDP_TCP_IP/TCP_table-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Package epstopdf Info: Source file: <tabulky.eps>
+(epstopdf)                    date: 2022-03-11 23:06:17
+(epstopdf)                    size: 128186 bytes
+(epstopdf)             Output file: <tabulky-eps-converted-to.pdf>
+(epstopdf)             Command: <epstopdf --outfile=tabulky-eps-converted-to.pdf tabulky.eps>
+(epstopdf)             \includegraphics on input line 133.
+runsystem(epstopdf --outfile=tabulky-eps-converted-to.pdf tabulky.eps)...executed (allowed).
 
- []
+Package epstopdf Info: Result file: <tabulky-eps-converted-to.pdf>
+(epstopdf)                    date: 2022-03-11 23:07:53
+(epstopdf)                    size: 48497 bytes.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+pdfTeX warning: pdflatex (file c:/Users/filip/Desktop/ctvrtak_letni_semestr/MKC_PKS/ukol_2_UDP_TCP_IP/tabulky-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<tabulky-eps-converted-to.pdf, id=43, 536.0025pt x 381.425pt>
+File: tabulky-eps-converted-to.pdf Graphic file (type pdf)
+<use tabulky-eps-converted-to.pdf>
+Package pdftex.def Info: tabulky-eps-converted-to.pdf  used on input line 133.
+(pdftex.def)             Requested size: 500.7687pt x 356.3512pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--135
 
  []
 
 [2
 
-] (c:/Users\filip\Desktop\ctvrtak_letni_semestr\MKC_PKS\ukol_2_UDP_TCP_IP\ukol_2_UDP_TCP_IP.aux)
+ <c:/Users/filip/Desktop/ctvrtak_letni_semestr/MKC_PKS/ukol_2_UDP_TCP_IP/tabulky-eps-converted-to.pdf>] (c:/Users\filip\Desktop\ctvrtak_letni_semestr\MKC_PKS\ukol_2_UDP_TCP_IP\ukol_2_UDP_TCP_IP.aux)
 Package rerunfilecheck Info: File `ukol_2_UDP_TCP_IP.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 13793 strings out of 480236
- 233409 string characters out of 2890393
+ 13800 strings out of 480236
+ 233602 string characters out of 2890393
  673614 words of memory out of 3000000
- 30041 multiletter control sequences out of 15000+200000
+ 30046 multiletter control sequences out of 15000+200000
  538305 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,7n,88p,400b,405s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on c:/Users\filip\Desktop\ctvrtak_letni_semestr\MKC_PKS\ukol_2_UDP_TCP_IP\ukol_2_UDP_TCP_IP.pdf (2 pages, 163539 bytes).
+Output written on c:/Users\filip\Desktop\ctvrtak_letni_semestr\MKC_PKS\ukol_2_UDP_TCP_IP\ukol_2_UDP_TCP_IP.pdf (2 pages, 210441 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 7 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 74 PDF objects out of 1000 (max. 8388607)
+ 8 named destinations out of 1000 (max. 500000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
