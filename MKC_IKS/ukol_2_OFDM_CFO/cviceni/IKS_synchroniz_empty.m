@@ -39,7 +39,7 @@ RX_SIG = [rnd_noise, preamble, rnd_noise];
 
 %% CFO
 
-%% Korelace s lokální replikou
+%% Korelace s lokalni replikou
 replica = preamble(1:16);
 corel = zeros(1,length(RX_SIG)- length(replica));
 for i = 1:length(RX_SIG)- length(replica)
