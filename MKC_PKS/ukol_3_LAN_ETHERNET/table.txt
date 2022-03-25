@@ -1,0 +1,5 @@
+1. Odesílatel je PC3, cíl je PC2.
+2. Odesílatel je PC4, cíl je PC3.
+3. Odesílatel je PC5, cíl je PC4.
+4. Odesílatel je PC1, cíl je PC2.
+5. Odesílatel je PC2, cíl je PC1

@@ -85,10 +85,18 @@ Určete jaké největší a nejmenší zpoždění vnese do komunikace mezi dvě
 oproti stavu, kdy by tyto stanice byly přímo propojeny kabelem. Zpoždění ve frontě a 
 přepojovacím poli uvažujte nulové. (2b):}}}
 
+V případě propojení napřímo zpoždění závisí na velikosti rámce. Pro Ethernet s rychlostí 1Gb/s. Kvůli možnosti provozovat
+1Gb ethernet na kolizní doméně je určena minimální délka přenášeného rámce na 512 bitů. Zpéždění jsou pak následující: 512b / 1e9 =  0.512  ns.
+Maximální délka (netagovaného rámce) je 1518B $\rightarrow$ 1518*8b/1e9 = 12.144 $\mu s$
+
 \section*{\large{\textbf{Za jakých podmínek můžeme vytvořit síť Ethernet se vzdáleností stanic řádu 100km? (0,5b):}}}
+Síť musí být tvořena nekolizním způsobem (bez metody CSMA/CD).
 
 \section*{\large{\textbf{Jak Ethernetový přepínač odliší značkovaný rámec podle 802.1q od rámce neznačkovaného? (0.5b)}}}
+Pokud je rámec značkovaný, tak je Ethernetový rámec oproti verzi 802.3 o 4B delší. Tyto 4B jsou vloženy do stávajícího Ethernetového rámce
+mezi části, které obsahují MAC adresu odesilatele a informaci o typu/délce.
 
+\clearpage
 \section*{\large{\textbf{Předpokládejte, že oba přepínače mají na počátku prázdné tabulky MAC adres a podle 
 následujícího popisu provozu tyto tabulky postupně sestavte. Ke všem níže uvedeným 
 případům uveďte, jak který přepínač na daný rámec reaguje (kam ho přepošle). (2b)}}}
@@ -96,6 +104,12 @@ případům uveďte, jak který přepínač na daný rámec reaguje (kam ho pře
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width = 1\textwidth]{zadani_sit.eps}
+	
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width = 1\textwidth]{MAC_tables.eps}
 	
 \end{figure}
 	
