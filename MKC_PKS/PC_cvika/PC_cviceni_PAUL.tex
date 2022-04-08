@@ -80,11 +80,134 @@
 \begin{flushleft}%% left justification
 	\textbf{\Large{MKC-PKS: Počítačové cvičení}}\hfill Filip Paul\\
 	\large{Návrh sítě \hfill\mydate}
-	Vytvořená síť má následující adresní prostor:
+	
 \end{flushleft}
+\section*{Návrh sítě:}
+Vygenerovaná síť má následující adresní prostor:
 		\begin{figure}[ht!]
 			\centering
 			\includegraphics[]{zadani.PNG}
+		\end{figure}
+
+Bohužel jsem se podíval na obrázek a rovnou jsem začal vytvářet síť podle postupu, který jsme dělali v prezenčních cvikách,
+což tak nějak neodpovídá zadání. Především tomu, že každá podsíť může využít až 31 IP adres. V mojem řešení
+je pro routery propojené napřímo dedikovaná menší síť. Celkově vznikne 6 podsítí.
+Pro výpočty parametrů sítí jsem využil vlastní python script, který si můžete zobrazit buď v mém GITHUB repozitáři
+\href{https://github.com/FilipPaul/ctvrtak_letni_semestr/blob/main/MKC_NSB/ukol1_kryptografie/README.md}{\color{blue} zde} nebo
+na konci dokumentu. V github repozitáři taky naleznete cisco\_project.pkt soubor z PC simulace.
+		\begin{figure}[ht!]
+			\centering
+			\includegraphics[width = 1\textwidth]{navrhSite.eps}
 		\end{figure}	
 
+\section*{PC simulace:}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width = 1\textwidth]{CISCO_diag.PNG}
+\end{figure}	
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width = 1\textwidth]{CISCO_config.PNG}
+\end{figure}	
+
+\clearpage
+
+\section*{Přílohy:}
+\noindent \textbf{calc.py}
+\lstinputlisting[language=python]{calc.py}
+\textbf{OUTPUT:}
+K dispozici:\\
+IP Address full format: 10.78.128.0/22\\
+IP: 10.78.128.0\\
+IP Bits: 00001010.01001110.10000000.00000000\\
+Subnet Mask: 255.255.252.0 suffix: 22\\
+Subnet Mask Bits: 11111111.11111111.11111100.00000000\\
+\\
+Network: 10.78.128.0 / 22\\
+Broadcast: 10.78.131.255\\
+Host Min: 10.78.128.1\\
+Host Max: 10.78.131.254\\
+Host Count: 1022\\
+\\
+LAN 0\\
+IP Address full format: 10.78.128.0/24\\
+IP: 10.78.128.0\\
+IP Bits: 00001010.01001110.10000000.00000000\\
+Subnet Mask: 255.255.255.0 suffix: 24\\
+Subnet Mask Bits: 11111111.11111111.11111111.00000000\\
+\\
+Network: 10.78.128.0 / 24\\
+Broadcast: 10.78.128.255\\
+Host Min: 10.78.128.1\\
+Host Max: 10.78.128.254\\
+Host Count: 254\\
+\\
+LAN 1\\
+IP Address full format: 10.78.129.0/24\\
+IP: 10.78.129.0\\
+IP Bits: 00001010.01001110.10000001.00000000\\
+Subnet Mask: 255.255.255.0 suffix: 24\\
+Subnet Mask Bits: 11111111.11111111.11111111.00000000\\
+\\
+Network: 10.78.129.0 / 24\\
+Broadcast: 10.78.129.255\\
+Host Min: 10.78.129.1\\
+Host Max: 10.78.129.254\\
+Host Count: 254\\
+\\
+LAN 2\\
+IP Address full format: 10.78.130.0/24\\
+IP: 10.78.130.0\\
+IP Bits: 00001010.01001110.10000010.00000000\\
+Subnet Mask: 255.255.255.0 suffix: 24\\
+Subnet Mask Bits: 11111111.11111111.11111111.00000000\\
+\\
+Network: 10.78.130.0 / 24\\
+Broadcast: 10.78.130.255\\
+Host Min: 10.78.130.1\\
+Host Max: 10.78.130.254\\
+Host Count: 254\\
+\\
+SUBNET 3\\
+IP Address full format: 10.78.131.0/30\\
+IP: 10.78.131.0\\
+IP Bits: 00001010.01001110.10000011.00000000\\
+Subnet Mask: 255.255.255.252 suffix: 30\\
+Subnet Mask Bits: 11111111.11111111.11111111.11111100\\
+\\
+Network: 10.78.131.0 / 30\\
+Broadcast: 10.78.131.3\\
+Host Min: 10.78.131.1\\
+Host Max: 10.78.131.2\\
+Host Count: 2\\
+\\
+SUBNET 4\\
+IP Address full format: 10.78.131.4/30\\
+IP: 10.78.131.4\\
+IP Bits: 00001010.01001110.10000011.00000100\\
+Subnet Mask: 255.255.255.252 suffix: 30\\
+Subnet Mask Bits: 11111111.11111111.11111111.11111100\\
+\\
+Network: 10.78.131.4 / 30\\
+Broadcast: 10.78.131.7\\
+Host Min: 10.78.131.5\\
+Host Max: 10.78.131.6\\
+Host Count: 2\\
+\\
+SUBNET 5\\
+IP Address full format: 10.78.131.8/30\\
+IP: 10.78.131.8\\
+IP Bits: 00001010.01001110.10000011.00001000\\
+Subnet Mask: 255.255.255.252 suffix: 30\\
+Subnet Mask Bits: 11111111.11111111.11111111.11111100\\
+\\
+Network: 10.78.131.8 / 30\\
+Broadcast: 10.78.131.11\\
+Host Min: 10.78.131.9\\
+Host Max: 10.78.131.10\\
+Host Count: 2\\
+
+\noindent  \textbf{myIPAdress.py}
+\lstinputlisting[language=python]{myIPAdress.py}
 \end{document}
