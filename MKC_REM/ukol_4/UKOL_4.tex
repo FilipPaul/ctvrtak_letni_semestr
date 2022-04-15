@@ -1,0 +1,107 @@
+%%PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt, a4paper]{article}% size of txt = 10pt
+\usepackage[top= 2cm,
+			bottom = 2cm,
+			left = 1.7cm,
+			right = 1.7cm,
+			footskip = 0.5cm,
+			headsep = 0cm,
+			headheight = 0cm
+					]{geometry}
+\usepackage{amsmath} % math packages
+\usepackage{amsfonts}% math packages
+\usepackage{amssymb} % math packages
+\usepackage{graphicx} %package for including graphics
+\usepackage{array}
+\usepackage[thinlines]{easytable}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage[hidelinks]{hyperref}
+\usepackage[shortlabels]{enumitem}
+\usepackage{svg}
+\usepackage{bigstrut}
+\usepackage{wrapfig,lipsum,booktabs}
+\usepackage{subcaption}
+\usepackage{xfrac}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage{xcolor}
+
+
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{1,1,1}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
+
+%date format
+\def\mydate{\leavevmode\hbox{\twodigits\day.\twodigits\month.\the\year}}
+\def\twodigits#1{\ifnum#1<10 0\fi\the#1}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{1cm}
+
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 2pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 2pt\hskip\tabcolsep}}
+\makeatother
+\newcolumntype{?}{!{\vrule width 2pt}}
+%%DOC ENVIROMENT%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%Title 
+\begin{flushleft}%% left justification
+	\textbf{\Large{MKC-REM: Úkol č. 4}}\hfill Filip Paul\\
+	\large{útlum komory \hfill\mydate}
+\end{flushleft}
+
+\noindent Vzhledem k tomu, že pro obě měření jsou použity stejné přístroje.
+Tak jsem pro výpočet prvně uvažoval útlum celé soustavy (jinak řečeno jen vstupní
+a výstupní výkon).\\
+
+\section{Měření se stínící komorou:}
+\noindent Vstupní výkon: $PIN = 2W = 10log(\dfrac{10}{1mW}) = 33\,dBm$\\\\
+výstupní výkon: $POUT = -31dB\mu V \rightarrow V = 10^{\dfrac{-31}{20}}\cdot 1 \mu U = 28.1838nV$\\\\
+$P = U^2/R \rightarrow PdBm = 10log(\dfrac{U^2}{R\cdot 1mW})= 10log(\dfrac{28.1838nV^2}{50\cdot 1mW}) =  -137.98 dBm  $\\\\
+Celkový útlum: $L_{kom} = PIN - POUT = 33 - (-137.98) = 171 dB$\\\\\\
+
+
+\section{Referenční měření bez stínící komory:}
+\noindent Vstupní výkon: $PIN = 20mW = 13\,dBm$\\\\
+výstupní výkon = $-31dBm$\\\\
+Celkový útlum: $L_{ref} = PIN - POUT = 13 - (-31) = 44 dB$\\\\\\
+
+\section{Přídavný útlum komory:}
+Zde je dobré poukázat na to, že při měření výstupního výkonu, v případě měření se stínící komorou, se úroveň naměřeného signálu pohybovala okolo
+citlivosti spektrálního analyzátoru (-138dBm vs -137.98dBm). Je tak možné, že útlum komory je ještě o něco vyšší. Pro výpočty byla uvažována
+vstupní impedance spektrálního analyzátoru 50 $\Omega$.\\
+
+\noindent $L_{cel} = L_{kom} - L_{ref} = 171 - 44 = 127 dB$\\
+\end{document}
