@@ -80,7 +80,50 @@
 	\textbf{\Large{MKC-PKS: Úkol č. 4}}\hfill Filip Paul\\
 	\large{Multimediální služby v sítích IP \hfill\mydate}
 \end{flushleft}
+\section*{Zadání úkolu 1:}
+Jaká je efektivita přenosu hovorového signálu (VoIP) v síti Ethernet při uvažování klasického
+formátu PCM (vzorkování 8kHz, 8b/vzorek, bez komprimace)? Uvažujte tři různé rámcové
+rychlosti: 40, 60 a 80 rámců/s. Přenos probíhá protokolem RTP.
+Efektivitu vyjádřete jako podíl užitečného toku dat a celkového toku (vč. hlaviček) na linkové
+vrstvě Ethernet. (2b)
 
+\section*{Vypracování úkolu 1:}
+\noindent Režie Ethernetového rámce je 144 bitů, režie RTP protokolu je 87 bitů.
+Celková režie (H) tak činí 231 bitů.\\
+Velikost přenášeného rámce (bez režie):\\
+$L_{40}$ = 64\,kbit/f = 64kbit / 40 = 1600 bitů\\
+$L_{60}$ = 64\,kbit/f = 64kbit / 60 = 1067 bitů\\
+$L_{80}$ = 64\,kbit/f = 64kbit / 80 = 800 bitů\\
+
+\noindent Efektivita E:\\\\
+$E_{40} = \dfrac{L}{H+L} = \dfrac{1600}{231+1600} = 87.38\%$\\\\
+$E_{60} = \dfrac{L}{H+L} = \dfrac{1067}{231+1067} = 82.2\%$\\\\
+$E_{80} = \dfrac{L}{H+L} = \dfrac{800}{231+800} = 77.59\%$\\\\
 	
+\section*{Zadání úkolu 2:}
+Uvažujte prioritní systém WFQ se třemi frontami. Plánovač vybírá v každém kole z první fronty 
+n1 = 1 paket, z druhé n2 = 2 pakety a z třetí n3 = 5 paketů. Vstupní toky do jednotlivých front 
+jsou R1 = 300Mb/s, R2 = 300Mb/s, R3 = 500Mb/s. Uvažujte stejně dlouhé pakety. Jaké budou 
+výstupní toky z front, když celková kapacita výstupní linky je 1Gb/s? (1b)
+
+\section*{Vypracování úkolu 2:}
+\noindent Výstupní toky:\\
+Fronta 1: $R_{out} = \dfrac{1}{1+2+5}\cdot 1Gb/s = 125Mb/s\rightarrow$ + 33Mbit z 2 + 42Mbit z 3 = 200Mbit/s \\\\
+Fronta 2: $R_{out} = \dfrac{2}{1+2+5}\cdot 1Gb/s = 250Mb/s\rightarrow$ + 83 Mbit z 3 = 283Mbit/s $\rightarrow$  33Mbit/s pro 1; R = 300Mbit/s\\\\
+Fronta 3: $R_{out} = \dfrac{5}{1+2+5}\cdot 1Gb/s = 625Mb/s\rightarrow$ zbyde 125Mbit (83Mbit do 2 a 42 do 1); R = 500Mbit/s\\\\
+\clearpage
+
+\section*{Zadání úkolu 3:}
+Předpokládejte, že zdroj dat je připojen k omezovači typu Leaky/Token Bucket linkou 10Mb/s. 
+Navrhněte přítok žetonů a velikost vědra tak, aby uživatel mohl bez omezení odeslat dávku 
+nejvýše 5MB a pak byl jeho tok omezen na 1Mb/s. Velikost paketu předpokládejte 1000B. (2b)
+
+\section*{Vypracování úkolu 3:}
+\noindent Počet žetonů:\\\\
+$r = \dfrac{Rs}{L} = \dfrac{1Mbit/s}{8000} = 125token/s$\\\\
+velikost vědra:\\\\
+$t_1 = \dfrac{5\,MB\cdot 8}{10Mbit/s} = 4s$\\\\
+$b = \dfrac{R_1\cdot t_1}{L} -t_1 \cdot r =  \dfrac{10Mbit\cdot 4}{8000} -4 \cdot 125 = 4500b$
+
 
 \end{document}
