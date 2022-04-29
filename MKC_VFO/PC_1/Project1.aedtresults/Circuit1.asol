@@ -1,20 +1,51 @@
 $begin '$base_index$'
   $begin 'properties'
     all_levels=000000000000
-    time(year=000000002022, month=000000000004, day=000000000019, hour=000000000020, min=000000000019, sec=000000000039)
+    time(year=000000002022, month=000000000004, day=000000000028, hour=000000000023, min=000000000044, sec=000000000019)
     version=000000000000
   $end 'properties'
   $begin '$base_index$'
     $index$(pos=000000003564, lin=000000000051, lvl=000000000000)
   $end '$base_index$'
 $end '$base_index$'
+$begin 'SolutionBlock181'
+	VariationDataID=-1
+	File='DV161_S50_V289.cir'
+$end 'SolutionBlock181'
+$begin 'SolutionBlock180'
+	SimSetupID=51
+	SimSetupName='LinearFrequency'
+	VersionID=289
+	DefaultSol=50
+$end 'SolutionBlock180'
+$begin 'SolutionBlock179'
+	SolutionName='LinearFrequency'
+	SolutionID=50
+	V=289
+	$begin 'States'
+		F(VID=161, Ver=289)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies()
+		SolutionType=1
+		CenterFreq=0
+	$end 'Definition'
+	AlterName=''
+$end 'SolutionBlock179'
+$begin 'BlockMapName'
+	FileHeader='SolutionBlock1'
+	'SolutionKey(SimSetup=51, Instance=\'C1=\\\'0.94479999999999997farad\\\' C2=\\\'0.26939999999999997farad\\\' C3=\\\'1.4415farad\\\' C4=\\\'0.88270000000000004farad\\\' C5=\\\'0.60399999999999998farad\\\' f3db=\\\'147MHz\\\' L1=\\\'1.1060000000000001H\\\' L2=\\\'0.68289999999999995H\\\' Rin=\\\'50ohm\\\'\', Solution=50, VersionID=289)'='SolutionBlock181'
+	'SolutionKey(SimSetup=51, Instance=\'SetupDefinition\', Solution=-1, VersionID=289)'='SolutionBlock180'
+	'SolutionKey(SimSetup=51, Instance=\'SolutionDefinition\', Solution=50, VersionID=289)'='SolutionBlock179'
+$end 'BlockMapName'
 $begin 'SolutionBlock1'
 	ProductName='Circuit Design'
 	CircuitName='Circuit1'
-	VersionID=214
+	VersionID=289
 	PostProcess=false
 	LossLess=true
-	NextUniqueID=215
+	NextUniqueID=290
 	MoveBackwards=false
 	$begin 'VariationIDs'
 		Map(V='', ID=52)
@@ -27,44 +58,13 @@ $begin 'SolutionBlock1'
 		Map(V='C1=\'0.94479999999999997farad\' C2=\'0.26939999999999997farad\' C3=\'1.4415farad\' C4=\'0.88270000000000004farad\' C5=\'0.60399999999999998farad\' f3db=\'160MHz\' L1=\'1.1060000000000001H\' L2=\'0.68289999999999995H\' Rin=\'50ohm\'', ID=142)
 	$end 'VariationIDs'
 $end 'SolutionBlock1'
-$begin 'BlockMapName'
-	FileHeader='SolutionBlock1'
-	'SolutionKey(SimSetup=51, Instance=\'C1=\\\'0.94479999999999997farad\\\' C2=\\\'0.26939999999999997farad\\\' C3=\\\'1.4415farad\\\' C4=\\\'0.88270000000000004farad\\\' C5=\\\'0.60399999999999998farad\\\' f3db=\\\'147MHz\\\' L1=\\\'1.1060000000000001H\\\' L2=\\\'0.68289999999999995H\\\' Rin=\\\'50ohm\\\'\', Solution=50, VersionID=214)'='SolutionBlock113'
-	'SolutionKey(SimSetup=51, Instance=\'SetupDefinition\', Solution=-1, VersionID=214)'='SolutionBlock112'
-	'SolutionKey(SimSetup=51, Instance=\'SolutionDefinition\', Solution=50, VersionID=214)'='SolutionBlock111'
-$end 'BlockMapName'
-$begin 'SolutionBlock111'
-	SolutionName='LinearFrequency'
-	SolutionID=50
-	V=214
-	$begin 'States'
-		F(VID=161, Ver=214)
-	$end 'States'
-	$begin 'Definition'
-		SamplingInterpolation=false
-		Frequencies()
-		SolutionType=1
-		CenterFreq=0
-	$end 'Definition'
-	AlterName=''
-$end 'SolutionBlock111'
-$begin 'SolutionBlock112'
-	SimSetupID=51
-	SimSetupName='LinearFrequency'
-	VersionID=214
-	DefaultSol=50
-$end 'SolutionBlock112'
-$begin 'SolutionBlock113'
-	VariationDataID=-1
-	File='DV161_S50_V214.cir'
-$end 'SolutionBlock113'
 $begin '$index$'
 	$begin '$index$'
-		SolutionBlock113(pos=3467, lin=47, lvl=0)
-		SolutionBlock1(pos=370, lin=1, lvl=0)
-		BlockMapName(pos=2409, lin=20, lvl=0)
-		SolutionBlock111(pos=3050, lin=26, lvl=0)
-		SolutionBlock112(pos=3340, lin=41, lvl=0)
+		SolutionBlock181(pos=370, lin=1, lvl=0)
+		SolutionBlock1(pos=1525, lin=32, lvl=0)
+		BlockMapName(pos=884, lin=26, lvl=0)
+		SolutionBlock179(pos=594, lin=11, lvl=0)
+		SolutionBlock180(pos=467, lin=5, lvl=0)
 		$base_index$(pos=0, lin=1, lvl=0)
 		$index$(pos=3564, lin=51, lvl=0)
 	$end '$index$'

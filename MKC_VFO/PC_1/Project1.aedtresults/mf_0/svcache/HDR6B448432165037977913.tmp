@@ -71,10 +71,10 @@ $begin 'SimValueCache'
 						SimValueContext(3, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
 					$end 'ReportTypeSolnDef'
 					$begin 'MajorVVMap'
-						VersionID=214
+						VersionID=289
 						$begin 'MinorVVMap'
 							MajorVariation='C1=\'0.94479999999999997farad\' C2=\'0.26939999999999997farad\' C3=\'1.4415farad\' C4=\'0.88270000000000004farad\' C5=\'0.60399999999999998farad\' f3db=\'147MHz\' L1=\'1.1060000000000001H\' L2=\'0.68289999999999995H\' Rin=\'50ohm\''
-							MinorCacheFile='minBFB20804165039237871.tmp'
+							MinorCacheFile='min67D62948165118225965.tmp'
 						$end 'MinorVVMap'
 					$end 'MajorVVMap'
 				$end 'VersionMap'
