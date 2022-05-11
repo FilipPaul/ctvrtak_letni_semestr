@@ -1,0 +1,20 @@
+(status): Nexxim version: 2021.2.0 WIN64, build time: May 24 2021, 22:40:30
+
+(status): Analyzing C:/Users/Filip/Desktop/ctvrtak_letni_semestr/MKC_VFO/zesilovac2/zesilovac2.aedtresults/Circuit1/temp/DV471_S6_V554.cir.
+(info): Processing circuit for new analysis.
+omp(status): Requested number of threads in UI setting is 4
+circuit_details(status): Total device types: 5
+device type                                       number of devices
+----------------------------------------------------------------------
+capacitor                                         2
+inductor                                          2
+port_impedance                                    2
+resistor                                          1
+s_element                                         1
+(status): License checkout took 3.885 seconds.
+models:s_element(warning): s1 - S-parameter data in file: c:\users\filip\desktop\ctvrtak_letni_semestr\mkc_vfo\zesilovac2\bfp720esd_w_noise_vce_3.0v_ic_5.0ma (2).s2p is not passive. Worst violation of 14.1457 at 1e+07 (Hz). Suspect active device.
+(info): Starting analysis type LNA.
+analysis:dc(status): Total DC newton iterations = 4, DC conv = 1.
+(status): LNA cpu time = 0.005
+(info): Simulation succeeded. Total simulator time: 0:00:03
+(status): Start Time:  05/11/2022 18:57:41, End Time:  05/11/2022 18:57:45, Host DESKTOP-OED99NF, 

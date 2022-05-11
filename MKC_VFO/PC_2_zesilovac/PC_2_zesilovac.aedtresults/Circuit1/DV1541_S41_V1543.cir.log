@@ -1,0 +1,20 @@
+(status): Nexxim version: 2021.2.0 WIN64, build time: May 24 2021, 22:40:30
+
+(status): Analyzing C:/Users/Filip/Desktop/ctvrtak_letni_semestr/MKC_VFO/PC_2_zesilovac/PC_2_zesilovac.aedtresults/Circuit1/temp/DV1541_S41_V1543.cir.
+(info): Processing circuit for new analysis.
+omp(status): Requested number of threads in UI setting is 4
+circuit_details(status): Total device types: 5
+device type                                       number of devices
+----------------------------------------------------------------------
+capacitor                                         4
+inductor                                          3
+port_impedance                                    2
+resistor                                          7
+s_element                                         1
+(status): License checkout took 3.894 seconds.
+models:s_element(warning): s1 - S-parameter data in file: c:\users\filip\desktop\ctvrtak_letni_semestr\mkc_vfo\pc_2_zesilovac\bfp196w_w_noise_vce_3.0v_ic_10ma.s2p is not passive. Worst violation of 29.6072 at 1e+07 (Hz). Suspect active device.
+(info): Starting analysis type LNA.
+analysis:dc(status): Total DC newton iterations = 4, DC conv = 1.
+(status): LNA cpu time = 0.016
+(info): Simulation succeeded. Total simulator time: 0:00:03
+(status): Start Time:  05/12/2022 01:00:25, End Time:  05/12/2022 01:00:29, Host DESKTOP-OED99NF, 

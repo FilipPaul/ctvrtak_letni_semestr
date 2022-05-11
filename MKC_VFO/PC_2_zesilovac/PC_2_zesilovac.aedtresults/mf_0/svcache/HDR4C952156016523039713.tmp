@@ -1,0 +1,140 @@
+SimValueCacheVersionID=1
+$begin 'SimValueInfos'
+	NextUniqueID=14
+	MoveBackwards=false
+	$begin 'SimValue'
+		ID=0
+		$begin 'SimValueParams'
+			QuantityName='S(Port1,Port1)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=1
+		$begin 'SimValueParams'
+			QuantityName='S(Port2,Port1)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=2
+		$begin 'SimValueParams'
+			QuantityName='S(Port1,Port2)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=3
+		$begin 'SimValueParams'
+			QuantityName='S(Port2,Port2)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=4
+		$begin 'SimValueParams'
+			QuantityName='MSG'
+			ValueState(90, 15, 0, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=5
+		$begin 'SimValueParams'
+			QuantityName='GMAX'
+			ValueState(90, 15, 0, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=6
+		$begin 'SimValueParams'
+			QuantityName='B1'
+			ValueState(90, 15, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=7
+		$begin 'SimValueParams'
+			QuantityName='K'
+			ValueState(90, 15, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=8
+		$begin 'SimValueParams'
+			QuantityName='INoise(Port1,Port1)'
+			ValueState(46, 6, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=9
+		$begin 'SimValueParams'
+			QuantityName='NF'
+			ValueState(90, 15, 0, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=10
+		$begin 'SimValueParams'
+			QuantityName='FMIN'
+			ValueState(90, 15, 0, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=11
+		$begin 'SimValueParams'
+			QuantityName='KCS'
+			ValueState(90, 15, 1, 5)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=12
+		$begin 'SimValueParams'
+			QuantityName='KCL'
+			ValueState(90, 15, 1, 5)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=13
+		$begin 'SimValueParams'
+			QuantityName='GPCS(gain=25dB)'
+			ValueState(90, 15, 1, 3)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+$end 'SimValueInfos'
+$begin 'SimValueCache'
+	$begin 'DesignMap'
+		DesignID=0
+		$begin 'SolutionMap'
+			$begin 'ContextMap'
+				SolutionID=41
+				$begin 'VersionMap'
+					$begin 'ReportTypeSolnDef'
+						ReportType=0
+						SimValueContext(3, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
+					$end 'ReportTypeSolnDef'
+					$begin 'MajorVVMap'
+						VersionID=1543
+						$begin 'MinorVVMap'
+							MajorVariation='Cin=\'14.199999999999999pF\' Cout=\'20nF\' Cout_2=\'100nF\' Lin=\'14.699999999999999nH\' Lout=\'32.200000000000003nH\' Lx=\'2nH\' Rx=\'340ohm\''
+							MinorCacheFile='min1B6724172165231015045.tmp'
+						$end 'MinorVVMap'
+					$end 'MajorVVMap'
+				$end 'VersionMap'
+			$end 'ContextMap'
+		$end 'SolutionMap'
+	$end 'DesignMap'
+$end 'SimValueCache'

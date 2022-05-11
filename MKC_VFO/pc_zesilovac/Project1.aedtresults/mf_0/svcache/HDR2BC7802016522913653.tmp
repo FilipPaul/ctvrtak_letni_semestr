@@ -1,0 +1,764 @@
+SimValueCacheVersionID=1
+$begin 'SimValueInfos'
+	NextUniqueID=92
+	MoveBackwards=false
+	$begin 'SimValue'
+		ID=0
+		$begin 'SimValueParams'
+			QuantityName='S(Port1,Port1)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=1
+		$begin 'SimValueParams'
+			QuantityName='S(Port2,Port1)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=2
+		$begin 'SimValueParams'
+			QuantityName='S(Port2,Port2)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=3
+		$begin 'SimValueParams'
+			QuantityName='S(Port1,Port2)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=4
+		$begin 'SimValueParams'
+			QuantityName='MSG'
+			ValueState(90, 15, 0, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=5
+		$begin 'SimValueParams'
+			QuantityName='GMAX'
+			ValueState(90, 15, 0, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=6
+		$begin 'SimValueParams'
+			QuantityName='B1'
+			ValueState(90, 15, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=7
+		$begin 'SimValueParams'
+			QuantityName='K'
+			ValueState(90, 15, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=8
+		$begin 'SimValueParams'
+			QuantityName='GMS'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=9
+		$begin 'SimValueParams'
+			QuantityName='VSWR(Port1)'
+			ValueState(90, 15, 1, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=10
+		$begin 'SimValueParams'
+			QuantityName='RHO(Port1)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=11
+		$begin 'SimValueParams'
+			QuantityName='Y(Port1,Port1)'
+			ValueState(17, 2, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=12
+		$begin 'SimValueParams'
+			QuantityName='INoise(Port1,Port1)'
+			ValueState(46, 6, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=13
+		$begin 'SimValueParams'
+			QuantityName='NF'
+			ValueState(90, 15, 0, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=14
+		$begin 'SimValueParams'
+			QuantityName='FMIN'
+			ValueState(90, 15, 0, 1)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=15
+		$begin 'SimValueParams'
+			QuantityName='KCS'
+			ValueState(90, 15, 1, 5)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=16
+		$begin 'SimValueParams'
+			QuantityName='KCL'
+			ValueState(90, 15, 1, 5)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=17
+		$begin 'SimValueParams'
+			QuantityName='NC(value=2.9dB)'
+			ValueState(90, 15, 1, 3)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=18
+		$begin 'SimValueParams'
+			QuantityName='GACS(gain=7.5dB)'
+			ValueState(90, 15, 1, 3)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=19
+		$begin 'SimValueParams'
+			QuantityName='NC(value=3dB)'
+			ValueState(90, 15, 1, 3)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=20
+		$begin 'SimValueParams'
+			QuantityName='GPCS(gain=8dB)'
+			ValueState(90, 15, 1, 3)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=21
+		$begin 'SimValueParams'
+			QuantityName='RCL(gain=3dB)'
+			ValueState(90, 15, 1, 3)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=22
+		$begin 'SimValueParams'
+			QuantityName='RCS(gain=0dB)'
+			ValueState(90, 15, 1, 3)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=23
+		$begin 'SimValueParams'
+			QuantityName='RCL(gain=0dB)'
+			ValueState(90, 15, 1, 3)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=24
+		$begin 'SimValueParams'
+			QuantityName='GPCS(gain=15dB)'
+			ValueState(90, 15, 1, 3)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=25
+		$begin 'SimValueParams'
+			QuantityName='GACS(gain=15dB)'
+			ValueState(90, 15, 1, 3)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=26
+		$begin 'SimValueParams'
+			QuantityName='NC(value=1.9dB)'
+			ValueState(90, 15, 1, 3)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=27
+		$begin 'SimValueParams'
+			QuantityName='GACL(gain=15dB)'
+			ValueState(90, 15, 1, 3)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=28
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.639-j0.135 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=29
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.889-j0.286 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=30
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.889-j0.285 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=31
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.905-j0.270 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=32
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.917-j0.255 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=33
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.920-j0.250 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=34
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.943-j0.142 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=35
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.787-j0.012 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=36
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.732-j0.023 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=37
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.663-j0.079 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=38
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.653-j0.096 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=39
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.641-j0.127 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=40
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.639-j0.134 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=41
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.638-j0.142 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=42
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.638-j0.141 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=43
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.638-j0.140 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=44
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.639-j0.138 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=45
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.638-j0.138 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=46
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.639-j0.137 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=47
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.641-j0.128 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=48
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.642-j0.124 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=49
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.642-j0.123 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=50
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.643-j0.120 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=51
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.643-j0.121 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=52
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.909-j0.067 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=53
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.797-j0.012 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=54
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.651-j0.099 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=55
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.681-j0.057 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=56
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.684-j0.054 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=57
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.637-j0.149 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=58
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.636-j0.166 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=59
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.637-j0.147 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=60
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.646-j0.112 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=61
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.657-j0.088 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=62
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.654-j0.093 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=63
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.652-j0.097 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=64
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.657-j0.089 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=65
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.666-j0.075 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=66
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.674-j0.065 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=67
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.678-j0.061 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=68
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.678-j0.060 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=69
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.675-j0.064 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=70
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.672-j0.067 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=71
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.670-j0.070 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=72
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.668-j0.073 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=73
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.665-j0.076 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=74
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.661-j0.082 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=75
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.659-j0.084 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=76
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.658-j0.087 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=77
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.648-j0.106 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=78
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.648-j0.107 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=79
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.647-j0.109 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=80
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.700-j0.041 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=81
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.885-j0.044 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=82
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.747-j0.018 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=83
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.669-j0.070 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=84
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.649-j0.103 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=85
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.652-j0.098 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=86
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.650-j0.101 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=87
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.649-j0.104 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=88
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.653-j0.095 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=89
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.655-j0.091 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=90
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.656-j0.090 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+	$begin 'SimValue'
+		ID=91
+		$begin 'SimValueParams'
+			QuantityName='RHOL(gamma=-0.651-j0.100 gain=15dB)'
+			ValueState(90, 15, 1, 2)
+			MatrixSize(0, 0)
+		$end 'SimValueParams'
+	$end 'SimValue'
+$end 'SimValueInfos'
+$begin 'SimValueCache'
+	$begin 'DesignMap'
+		DesignID=0
+		$begin 'SolutionMap'
+			$begin 'ContextMap'
+				SolutionID=15
+				$begin 'VersionMap'
+					$begin 'ReportTypeSolnDef'
+						ReportType=0
+						SimValueContext(3, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
+					$end 'ReportTypeSolnDef'
+					$begin 'MajorVVMap'
+						VersionID=661
+						$begin 'MinorVVMap'
+							MajorVariation='Cx=\'0pF\' Lx=\'0H\' Rx=\'0ohm\''
+							MinorCacheFile='min665412796165229595598.tmp'
+						$end 'MinorVVMap'
+					$end 'MajorVVMap'
+				$end 'VersionMap'
+			$end 'ContextMap'
+		$end 'SolutionMap'
+	$end 'DesignMap'
+$end 'SimValueCache'
